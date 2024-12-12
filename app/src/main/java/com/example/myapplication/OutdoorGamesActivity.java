@@ -35,5 +35,16 @@ public class OutdoorGamesActivity extends AppCompatActivity {
                 startActivity(intent);  // Start the Basketball game activity
             }
         });
+        Button btnFootball = findViewById(R.id.btnFootball);
+
+        // Set OnClickListener for the Basketball button
+        btnFootball.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open the Basketball game activity when the button is clicked
+                Intent intent = new Intent(OutdoorGamesActivity.this, FootballGameActivity.class);
+                startActivity(intent);  // Start the Basketball game activity
+            }
+        });
     }
 }

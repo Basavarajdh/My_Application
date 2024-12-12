@@ -14,12 +14,12 @@
         android:textStyle="bold"
         android:layout_marginBottom="16dp" />
 
-    <Button
+    <!--<Button
         android:id="@+id/btnFootball"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Football" />
-
+-->
     <Button
         android:id="@+id/btnCricket"
         android:layout_width="match_parent"
@@ -40,7 +40,17 @@
         android:padding="40dp"
         android:textSize="18sp"/>
 
-
+    <Button
+        android:id="@+id/btnFootball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Football"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/card_background"
+        android:padding="40dp"
+        android:textSize="18sp"/>
 
 
 

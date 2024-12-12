@@ -48,6 +48,7 @@
         <activity android:name=".AliGuliManeActivity"/>
         <activity android:name=".InstructionsActivity" />
         <activity android:name=".BasketballGameActivity"/>
+        <activity android:name=".FootballGameActivity" />
 
 
     </application>

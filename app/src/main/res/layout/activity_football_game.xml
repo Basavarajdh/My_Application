@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image (Football Field) -->
+    <ImageView
+        android:id="@+id/gameBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/football_field"
+        android:scaleType="centerCrop"/>
+
+    <!-- Goalpost -->
+    <ImageView
+        android:id="@+id/goalPostImage"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/goalpost"/>
+
+    <!-- Goalkeeper -->
+    <ImageView
+        android:id="@+id/goalkeeperImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/goalPostImage"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/goalkeeper"/>
+
+    <!-- Football -->
+    <ImageView
+        android:id="@+id/ballImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/football"/>
+
+    <!-- Arrow for Aiming -->
+    <ImageView
+        android:id="@+id/arrowImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@id/ballImage"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/arrow"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Shoot Button -->
+    <Button
+        android:id="@+id/btnShoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="Shoot"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background1"/>
+
+    <!-- Score Display -->
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Score: 0"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
