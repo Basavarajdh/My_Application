@@ -26,17 +26,27 @@
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/basketball"
-        android:visibility="gone"/>
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/basketball"/>
+
+    <!-- Arrow for Aiming -->
+    <ImageView
+        android:id="@+id/arrowImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@id/ballImage"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/arrow"
+        android:layout_marginBottom="20dp"/>
 
     <!-- Shoot Button -->
     <Button
         android:id="@+id/btnShoot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
         android:text="Shoot"
         android:textSize="18sp"
         android:textColor="#FFFFFF"
