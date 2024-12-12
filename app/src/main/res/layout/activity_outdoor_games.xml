@@ -27,5 +27,22 @@
         android:text="Cricket"
         android:layout_marginTop="8dp" />
 
+        <!-- Button for Basketball -->
+    <Button
+        android:id="@+id/btnBasketball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Basketball"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/card_background"
+        android:padding="40dp"
+        android:textSize="18sp"/>
+
+
+
+
+
 
 </LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F3F4F6"> <!-- Light background for a clean look -->
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Player 1's Turn"
+        android:textSize="24sp"
+        android:textColor="#1E3A8A"
+        android:textStyle="bold" />
+    <!-- Dark blue color for better visibility -->
+
+    <!-- Wrapping GridLayout inside a ScrollView for better screen fitting -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="7"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:elevation="4dp">
+            <!-- White background for the board -->
+            <!-- Slight shadow for a subtle 3D effect -->
+
+            <!-- Button Style for Pits -->
+            <Button
+                android:id="@+id/pit0"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit1"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit2"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit3"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit4"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit5"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit6"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit7"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit8"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit9"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit10"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit11"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit12"
+                style="@style/PitButtonStyle" />
+
+            <Button
+                android:id="@+id/pit13"
+                style="@style/PitButtonStyle" />
+
+        </GridLayout>
+
+
+    </ScrollView>
+    <Button
+        android:id="@+id/instructionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How to Play"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#1E3A8A"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center" />
+</LinearLayout>

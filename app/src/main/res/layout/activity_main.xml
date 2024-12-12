@@ -4,37 +4,43 @@
     android:layout_height="match_parent">
 
     <!-- Background Image -->
-
-    <!-- Card for Indoor Games -->
     <ImageView
         android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
         android:contentDescription="@string/background_image"
         android:scaleType="centerCrop"
         android:src="@drawable/background_image" />
 
-    <!-- Card for Outdoor Games -->
-
+    <!-- Card for Indoor Games -->
     <Button
         android:id="@+id/btnIndoorGames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/card_background"
-        android:padding="50dp"
-        android:text="Indoor Games" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/card_background"
+    android:padding="40dp"
+    android:text="Indoor Games"
+    android:textColor="#FFFFFF"
+    android:textSize="18sp"
+    android:layout_marginBottom="20dp" />
 
+    <!-- Card for Outdoor Games -->
     <Button
         android:id="@+id/btnOutdoorGames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:background="@drawable/card_background"
-        android:padding="50dp"
-        android:text="Outdoor Games" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnIndoorGames"
+        android:layout_marginTop="50dp"
+    android:background="@drawable/card_background"
+    android:padding="40dp"
+    android:text="Outdoor Games"
+    android:textColor="#FFFFFF"
+    android:textSize="18sp" />
+
 </RelativeLayout>

@@ -43,6 +43,12 @@
             android:exported="false" /> <!-- No intent-filter, not exposed -->
         <activity android:name=".ChessActivity" />
         <activity android:name=".CricketActivity" />
+        <activity android:name=".TicTacToeActivity" />
+        <activity android:name=".RockPaperScissorsActivity"/>
+        <activity android:name=".AliGuliManeActivity"/>
+        <activity android:name=".InstructionsActivity" />
+        <activity android:name=".BasketballGameActivity"/>
+
 
     </application>
 

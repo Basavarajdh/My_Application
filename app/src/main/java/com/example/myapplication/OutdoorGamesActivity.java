@@ -22,5 +22,18 @@ public class OutdoorGamesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // Example buttons for outdoor games
+
+        Button btnBasketball = findViewById(R.id.btnBasketball);
+
+        // Set OnClickListener for the Basketball button
+        btnBasketball.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open the Basketball game activity when the button is clicked
+                Intent intent = new Intent(OutdoorGamesActivity.this, BasketballGameActivity.class);
+                startActivity(intent);  // Start the Basketball game activity
+            }
+        });
     }
 }

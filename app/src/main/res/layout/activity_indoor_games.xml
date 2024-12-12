@@ -27,5 +27,23 @@
         android:text="Table Tennis"
         android:layout_marginTop="8dp" />
 
+    <Button
+        android:id="@+id/buttonTicTacToe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Tic Tac Toe"/>
+    <Button
+        android:id="@+id/buttonRockPaperScissors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Rock-Paper-Scissors"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/buttonAliGuliMane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Ali Guli Mane"
+        android:layout_marginTop="10dp"/>
+
 
 </LinearLayout>

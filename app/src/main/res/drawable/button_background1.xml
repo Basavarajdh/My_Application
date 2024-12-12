@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- Background with Gradient -->
+        <gradient
+            android:startColor="#FF5722"
+        android:endColor="#FF8A50"
+        android:angle="45" />         <!-- Diagonal gradient effect -->
+
+        <!-- Rounded corners with a 10dp radius -->
+        <corners android:radius="10dp" />
+
+        <!-- Padding around the button text for better spacing -->
+        <padding
+            android:left="20dp"
+            android:right="20dp"
+            android:top="10dp"
+            android:bottom="10dp" />
+
+        <!-- Shadow effect for a subtle 3D appearance -->
+        <solid android:color="#FF5722" />
+    </shape>
+
+
+</selector>
