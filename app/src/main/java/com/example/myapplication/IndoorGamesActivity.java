@@ -51,7 +51,21 @@ public class IndoorGamesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
+Button PuliMekaButton =findViewById(R.id.buttonPuliMeka);
+PuliMekaButton.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(IndoorGamesActivity.this, PuliMekaActivity.class);
+        startActivity(intent);
+    }
+});
+        Button LudoButton =findViewById(R.id.buttonLudo);
+        LudoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IndoorGamesActivity.this, LudoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

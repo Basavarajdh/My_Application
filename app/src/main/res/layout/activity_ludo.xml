@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LudoActivity">
+
+    <!-- GridLayout for the 5x5 game board -->
+    <GridLayout
+        android:id="@+id/boardGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:rowCount="5"
+        android:columnCount="5"
+        android:background="@drawable/board_background"
+        android:padding="16dp"
+        android:orientation="horizontal">
+
+        <!-- Row 1 -->
+        <TextView
+            android:id="@+id/cell_0_0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="0,0"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_0_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="0,1"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_0_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="0,2"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_0_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="0,3"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_0_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="0,4"
+            android:textColor="#000" />
+
+        <!-- Row 2 -->
+        <TextView
+            android:id="@+id/cell_1_0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="1,0"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_1_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="1,1"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_1_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="1,2"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_1_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="1,3"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_1_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="1,4"
+            android:textColor="#000" />
+
+        <!-- Row 3 -->
+        <TextView
+            android:id="@+id/cell_2_0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="2,0"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_2_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="2,1"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_2_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="2,2"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_2_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="2,3"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_2_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="2,4"
+            android:textColor="#000" />
+
+        <!-- Row 4 -->
+        <TextView
+            android:id="@+id/cell_3_0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="3,0"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_3_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="3,1"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_3_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="3,2"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_3_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="3,3"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_3_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="3,4"
+            android:textColor="#000" />
+
+        <!-- Row 5 -->
+        <TextView
+            android:id="@+id/cell_4_0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="4,0"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_4_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="4,1"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_4_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="4,2"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_4_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="4,3"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/cell_4_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/cell_background"
+            android:gravity="center"
+            android:text="4,4"
+            android:textColor="#000" />
+
+    </GridLayout>
+
+    <!-- Button to roll the dice -->
+    <Button
+        android:id="@+id/rollDiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boardGrid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Roll Dice" />
+
+    <!-- TextView to display the dice result -->
+    <TextView
+        android:id="@+id/diceResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rollDiceButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Dice Result: 0"
+        android:textSize="18sp"
+        android:textColor="#000" />
+
+</RelativeLayout>

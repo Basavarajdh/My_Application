@@ -49,8 +49,9 @@
         <activity android:name=".InstructionsActivity" />
         <activity android:name=".BasketballGameActivity"/>
         <activity android:name=".FootballGameActivity" />
-
-
+        <activity android:name=".PuliMekaActivity" />
+        <activity android:name=".showinfo" />
+        <activity android:name=".LudoActivity" />
     </application>
 
 

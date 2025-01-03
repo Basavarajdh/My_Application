@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/gameStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Tigers and Goats"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <GridLayout
+        android:id="@+id/gameBoard"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/gameStatus"
+        android:columnCount="5"
+        android:rowCount="5">
+
+        <!-- Create 25 buttons for a 5x5 grid -->
+        <Button
+            android:id="@+id/cell_0_0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_0_1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_0_2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_0_3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_0_4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_1_0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_1_1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_1_2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_1_3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_1_4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_2_0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_2_1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_2_2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_2_3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_2_4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_3_0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_3_1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_3_2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_3_3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_3_4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_4_0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_4_1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_4_2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_4_3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/cell_4_4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp" />
+
+
+        <!-- Repeat similar buttons for each cell (0_1, 0_2, ..., 4_4) -->
+        <!-- For brevity, not all buttons are listed here -->
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/showInfoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How to play"
+        android:layout_below="@id/gameBoard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>

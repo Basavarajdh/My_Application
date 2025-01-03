@@ -31,19 +31,34 @@
         android:id="@+id/buttonTicTacToe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play Tic Tac Toe"/>
+        android:text="Play Tic Tac Toe" />
+
     <Button
         android:id="@+id/buttonRockPaperScissors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Play Rock-Paper-Scissors"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp" />
+
     <Button
         android:id="@+id/buttonAliGuliMane"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Play Ali Guli Mane"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp" />
 
+    <Button
+        android:id="@+id/buttonPuliMeka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puli Meka"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/buttonLudo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ludo"
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>
