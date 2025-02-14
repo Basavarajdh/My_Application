@@ -1,46 +1,66 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <!-- Background Image -->
+
+    <!-- Indoor Games Button -->
     <ImageView
         android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:contentDescription="@string/background_image"
+        android:contentDescription="Background Image"
         android:scaleType="centerCrop"
-        android:src="@drawable/background_image" />
+        android:src="@drawable/background_image"
+        tools:layout_editor_absoluteX="-34dp"
+        tools:layout_editor_absoluteY="573dp" />
 
-    <!-- Card for Indoor Games -->
+    <!-- Outdoor Games Button -->
     <Button
         android:id="@+id/btnIndoorGames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-    android:layout_alignParentTop="true"
-    android:background="@drawable/card_background"
-    android:padding="40dp"
-    android:text="Indoor Games"
-    android:textColor="#FFFFFF"
-    android:textSize="18sp"
-    android:layout_marginBottom="20dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="227dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="635dp"
+        android:background="@drawable/board_background"
+        android:drawableTop="@drawable/indoor_image"
+        android:drawablePadding="10dp"
+        android:padding="20dp"
+        android:text="Indoor Games"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Card for Outdoor Games -->
     <Button
         android:id="@+id/btnOutdoorGames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/btnIndoorGames"
-        android:layout_marginTop="50dp"
-    android:background="@drawable/card_background"
-    android:padding="40dp"
-    android:text="Outdoor Games"
-    android:textColor="#FFFFFF"
-    android:textSize="18sp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="637dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="225dp"
+        android:background="@drawable/board_background"
+        android:drawableTop="@drawable/indoor_image"
+        android:drawablePadding="10dp"
+        android:padding="20dp"
+        android:text="Outdoor Games"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

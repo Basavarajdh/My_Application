@@ -1,64 +1,177 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvIndoorGames"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Indoor Games"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
-
-    <Button
-        android:id="@+id/btnChess"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Chess" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/btnTableTennis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Table Tennis"
-        android:layout_marginTop="8dp" />
+        <TextView
+            android:id="@+id/tvIndoorGames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Indoor Games"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
 
-    <Button
-        android:id="@+id/buttonTicTacToe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play Tic Tac Toe" />
+        <!-- Chess -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/buttonRockPaperScissors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play Rock-Paper-Scissors"
-        android:layout_marginTop="20dp" />
+            <ImageView
+                android:layout_width="143dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Chess"
+                android:src="@drawable/chess_icon" />
 
-    <Button
-        android:id="@+id/buttonAliGuliMane"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play Ali Guli Mane"
-        android:layout_marginTop="10dp" />
+            <Button
+                android:id="@+id/btnChess"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="Chess" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonPuliMeka"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Puli Meka"
-        android:layout_marginTop="10dp" />
+        <!-- Table Tennis -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
 
-    <Button
-        android:id="@+id/buttonLudo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ludo"
-        android:layout_marginTop="10dp" />
+            <ImageView
+                android:layout_width="142dp"
+                android:layout_height="104dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Table Tennis"
+                android:src="@drawable/table_tennis_icon" />
 
-</LinearLayout>
+            <Button
+                android:id="@+id/btnTableTennis"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="Table Tennis" />
+        </LinearLayout>
+
+        <!-- Tic Tac Toe -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="141dp"
+                android:layout_height="93dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Tic Tac Toe"
+                android:src="@drawable/tic_tac_toe_icon" />
+
+            <Button
+                android:id="@+id/buttonTicTacToe"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="Play Tic Tac Toe" />
+        </LinearLayout>
+
+        <!-- Rock-Paper-Scissors -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="84dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Rock Paper Scissors"
+                android:src="@drawable/rock_paper_scissors_icon" />
+
+            <Button
+                android:id="@+id/buttonRockPaperScissors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play Rock-Paper-Scissors" />
+        </LinearLayout>
+
+        <!-- Ali Guli Mane -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="143dp"
+                android:layout_height="87dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Ali Guli Mane"
+                android:src="@drawable/ali_guli_mane_icon" />
+
+            <Button
+                android:id="@+id/buttonAliGuliMane"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:text="Play Ali Guli Mane" />
+        </LinearLayout>
+
+        <!-- Puli Meka -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="142dp"
+                android:layout_height="89dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Puli Meka"
+                android:src="@drawable/puli_meka_icon" />
+
+            <Button
+                android:id="@+id/buttonPuliMeka"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:text="Puli Meka" />
+        </LinearLayout>
+
+        <!-- Ludo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="142dp"
+                android:layout_height="89dp"
+                android:src="@drawable/ludo_icon"
+                android:contentDescription="Ludo"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/buttonLudo"
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:text="Ludo" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

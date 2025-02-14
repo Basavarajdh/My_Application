@@ -26,8 +26,8 @@ public class LudoActivity extends AppCompatActivity {
         Button rollDiceButton = findViewById(R.id.rollDiceButton);
         TextView diceResult = findViewById(R.id.diceResult);
 
-        // Initialize the board (example setup)
-        initializeBoard();
+        // Initialize the board
+        initializeBoard(boardGrid);
 
         // Dice roll button
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
@@ -43,14 +43,21 @@ public class LudoActivity extends AppCompatActivity {
         });
     }
 
-    private void initializeBoard() {
+    private void initializeBoard(GridLayout boardGrid) {
+        // Ensure GridLayout has exactly 25 cells (5x5)
+        if (boardGrid.getChildCount() != 25) {
+            throw new IllegalStateException("GridLayout must have 25 children.");
+        }
+
         // Fill the board with default values
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 board[i][j] = 0; // 0 indicates an empty cell
             }
         }
+
         board[0][0] = 1; // Starting position
+        updateBoardUI(boardGrid);
     }
 
     private int rollDice() {
@@ -59,7 +66,7 @@ public class LudoActivity extends AppCompatActivity {
     }
 
     private void updatePlayerPosition() {
-        // Calculate new position (simplified as linear for demonstration)
+        // Calculate new position
         playerPosition += diceRoll;
 
         // Check if player reached the end
@@ -70,10 +77,11 @@ public class LudoActivity extends AppCompatActivity {
     }
 
     private void updateBoardUI(GridLayout boardGrid) {
-        // Clear previous positions
+        // Clear all cells
         for (int i = 0; i < boardGrid.getChildCount(); i++) {
             TextView cell = (TextView) boardGrid.getChildAt(i);
-            cell.setBackgroundResource(R.drawable.cell_background);
+            cell.setBackgroundResource(R.drawable.cell_background); // Default cell background
+            cell.setText(""); // Clear text
         }
 
         // Update player position
@@ -82,6 +90,7 @@ public class LudoActivity extends AppCompatActivity {
         int cellIndex = row * 5 + col;
 
         TextView currentCell = (TextView) boardGrid.getChildAt(cellIndex);
-        currentCell.setBackgroundResource(R.drawable.player_background);
+        currentCell.setBackgroundResource(R.drawable.player_background); // Highlight player position
+        currentCell.setText("P"); // Indicate player
     }
 }
