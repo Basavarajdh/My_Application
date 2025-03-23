@@ -13,15 +13,15 @@ public class IndoorGamesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_indoor_games);
 
         // Button for Chess
-        Button btnChess = findViewById(R.id.btnChess);
-        btnChess.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navigate to ChessActivity
-                Intent intent = new Intent(IndoorGamesActivity.this, ChessActivity.class);
-                startActivity(intent);
-            }
-        });
+//        Button btnChess = findViewById(R.id.btnChess);
+//        btnChess.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Navigate to ChessActivity
+//                Intent intent = new Intent(IndoorGamesActivity.this, ChessActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         Button ticTacToeButton = findViewById(R.id.buttonTicTacToe);
 
