@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#F3F4F6"> <!-- Light background for a clean look -->
+    android:gravity="center_horizontal"
+    android:background="#F3F4F6">
 
     <TextView
         android:id="@+id/statusText"
@@ -16,95 +17,148 @@
         android:textSize="24sp"
         android:textColor="#1E3A8A"
         android:textStyle="bold" />
-    <!-- Dark blue color for better visibility -->
 
-    <!-- Wrapping GridLayout inside a ScrollView for better screen fitting -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
 
-        <GridLayout
-            android:id="@+id/gridLayout"
-            android:layout_width="match_parent"
+        <!-- Player 2's column of pits -->
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:rowCount="7"
-            android:background="#FFFFFF"
-            android:padding="8dp"
-            android:layout_margin="8dp"
-            android:elevation="4dp">
-            <!-- White background for the board -->
-            <!-- Slight shadow for a subtle 3D effect -->
+            android:orientation="vertical"
+            android:gravity="center">
 
-            <!-- Button Style for Pits -->
+            <Button
+                android:id="@+id/pit12"
+                style="@style/PitButtonStyle"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/pit11"
+                style="@style/PitButtonStyle"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/pit10"
+                style="@style/PitButtonStyle"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/pit9"
+                style="@style/PitButtonStyle"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/pit8"
+                style="@style/PitButtonStyle"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/pit7"
+                style="@style/PitButtonStyle"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+
+        <!-- Player 1's column of pits -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="8dp">
+
             <Button
                 android:id="@+id/pit0"
-                style="@style/PitButtonStyle" />
+                style="@style/PitButtonStyle"
+                android:layout_marginBottom="8dp" />
 
             <Button
                 android:id="@+id/pit1"
-                style="@style/PitButtonStyle" />
+                style="@style/PitButtonStyle"
+                android:layout_marginBottom="8dp" />
 
             <Button
                 android:id="@+id/pit2"
-                style="@style/PitButtonStyle" />
+                style="@style/PitButtonStyle"
+                android:layout_marginBottom="8dp" />
 
             <Button
                 android:id="@+id/pit3"
-                style="@style/PitButtonStyle" />
+                style="@style/PitButtonStyle"
+                android:layout_marginBottom="8dp" />
 
             <Button
                 android:id="@+id/pit4"
-                style="@style/PitButtonStyle" />
+                style="@style/PitButtonStyle"
+                android:layout_marginBottom="8dp" />
 
             <Button
                 android:id="@+id/pit5"
                 style="@style/PitButtonStyle" />
+        </LinearLayout>
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/pit6"
-                style="@style/PitButtonStyle" />
+    <!-- Mancalas and labels -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
 
-            <Button
-                android:id="@+id/pit7"
-                style="@style/PitButtonStyle" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
 
-            <Button
-                android:id="@+id/pit8"
-                style="@style/PitButtonStyle" />
-
-            <Button
-                android:id="@+id/pit9"
-                style="@style/PitButtonStyle" />
-
-            <Button
-                android:id="@+id/pit10"
-                style="@style/PitButtonStyle" />
-
-            <Button
-                android:id="@+id/pit11"
-                style="@style/PitButtonStyle" />
-
-            <Button
-                android:id="@+id/pit12"
-                style="@style/PitButtonStyle" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mancala (P2)"
+                android:textSize="16sp"
+                android:textColor="#1E3A8A"
+                android:layout_marginBottom="8dp" />
 
             <Button
                 android:id="@+id/pit13"
-                style="@style/PitButtonStyle" />
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#E5E7EB" />
+        </LinearLayout>
 
-        </GridLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="24dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mancala (P1)"
+                android:textSize="16sp"
+                android:textColor="#1E3A8A"
+                android:layout_marginBottom="8dp" />
 
-    </ScrollView>
+            <Button
+                android:id="@+id/pit6"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#E5E7EB" />
+        </LinearLayout>
+    </LinearLayout>
+
     <Button
         android:id="@+id/instructionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="How to Play"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#1E3A8A"
-        android:textColor="#FFFFFF"
-        android:layout_gravity="center" />
+        android:textColor="#FFFFFF" />
 </LinearLayout>

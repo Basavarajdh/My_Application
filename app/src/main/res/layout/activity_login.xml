@@ -1,27 +1,117 @@
-<LinearLayout
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="#FFFFFF">
 
-    <EditText
-        android:id="@+id/etEmailLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Email"
-        android:inputType="textEmailAddress" />
+    <!-- Top Illustration Image -->
+    <ImageView
+        android:id="@+id/loginIllustration"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:src="@drawable/login_illustration"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <EditText
-        android:id="@+id/etPasswordLogin"
-        android:layout_width="match_parent"
+    <!-- White rounded container -->
+    <LinearLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Enter Password"
-        android:inputType="textPassword" />
+        android:orientation="vertical"
+        android:background="@drawable/bg_white_rounded"
+        android:padding="24dp"
+        app:layout_constraintTop_toBottomOf="@id/loginIllustration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:elevation="6dp">
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_gravity="center" />
+
+        <!-- Username Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_user"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPasswordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_password"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textAllCaps="true"
+            android:backgroundTint="#879BFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="@drawable/rounded_button" />
+    </LinearLayout>
+
+    <!-- Sign up text -->
+    <TextView
+        android:id="@+id/tvSignup"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login" />
-</LinearLayout>
+        android:text="Not yet registered? SignUp Now"
+        android:textColor="#879BFF"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/loginContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Forgot Password text -->
+    <TextView
+        android:id="@+id/tvForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textColor="#FF6B6B"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvSignup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.snackbar.Snackbar;
 import java.security.MessageDigest;
@@ -14,27 +15,31 @@ import java.security.NoSuchAlgorithmException;
 public class LoginActivity extends AppCompatActivity {
     private Button loginButton;
     private EditText emailInput, passwordInput;
+    private TextView signUpText, forgotPasswordText;
     private DbHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);  // Changed to activity_login
+        setContentView(R.layout.activity_login);  // XML layout for login screen
 
         initializeViews();
         setupDatabase();
         setupLoginButton();
+        setupNavigationLinks();  // Handles Sign Up and Forgot Password links
     }
 
     private void initializeViews() {
         loginButton = findViewById(R.id.btnLogin);
         emailInput = findViewById(R.id.etEmailLogin);
         passwordInput = findViewById(R.id.etPasswordLogin);
+        signUpText = findViewById(R.id.tvSignup);
+        forgotPasswordText = findViewById(R.id.tvForgot);
     }
 
     private void setupDatabase() {
         dbHandler = new DbHandler(this);
-        // Only add test user if it doesn't exist
+        // Add default test user if not already added
         if (dbHandler.checkUser(new User("Basavaraj", hashPassword("1234"))) == -1) {
             dbHandler.addUser(new User("Basavaraj", hashPassword("1234")));
         }
@@ -42,6 +47,16 @@ public class LoginActivity extends AppCompatActivity {
 
     private void setupLoginButton() {
         loginButton.setOnClickListener(v -> attemptLogin());
+    }
+
+    private void setupNavigationLinks() {
+        signUpText.setOnClickListener(v ->
+                startActivity(new Intent(LoginActivity.this, SignUpActivity.class))
+        );
+
+        forgotPasswordText.setOnClickListener(v ->
+                startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class))
+        );
     }
 
     private void attemptLogin() {
@@ -91,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
         ).show();
     }
 
-    private String hashPassword(String password) {
+    public static String hashPassword(String password) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] hash = digest.digest(password.getBytes());

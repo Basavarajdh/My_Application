@@ -1,66 +1,67 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <!-- Background Image -->
-
-    <!-- Indoor Games Button -->
     <ImageView
         android:id="@+id/backgroundImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="Background Image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/bg_white_rounded"
         android:scaleType="centerCrop"
-        android:src="@drawable/background_image"
+        android:contentDescription="Background"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-34dp" />
-
-    <!-- Outdoor Games Button -->
-    <Button
-        android:id="@+id/btnIndoorGames"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="227dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="635dp"
-        android:background="@drawable/board_background"
-        android:drawableTop="@drawable/indoor_image"
-        android:drawablePadding="10dp"
-        android:padding="20dp"
-        android:text="Indoor Games"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
-        android:id="@+id/btnOutdoorGames"
-        android:layout_width="wrap_content"
+    <!-- Container for Buttons -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnIndoorGames"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="637dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="225dp"
-        android:background="@drawable/board_background"
-        android:drawableTop="@drawable/outdoor_image13"
-        android:drawablePadding="10dp"
-        android:padding="20dp"
-        android:text="Outdoor Games"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="@drawable/bg_white_rounded"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="32dp">
+
+        <!-- Indoor Games Button -->
+        <Button
+            android:id="@+id/btnIndoorGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Indoor Games"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/indoor_image"
+            android:drawablePadding="12dp"
+            android:background="@drawable/rounded_button"
+            android:padding="20dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Outdoor Games Button -->
+        <Button
+            android:id="@+id/btnOutdoorGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Outdoor Games"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:drawableTop="@drawable/outdoor_image13"
+            android:drawablePadding="12dp"
+            android:background="@drawable/rounded_button"
+            android:padding="20dp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

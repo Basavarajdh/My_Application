@@ -19,51 +19,71 @@
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
 
-        <!-- Chess -->
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="106dp"-->
-<!--            android:layout_marginTop="8dp"-->
-<!--            android:gravity="center_vertical"-->
-<!--            android:orientation="horizontal">-->
 
-<!--            <ImageView-->
-<!--                android:layout_width="143dp"-->
-<!--                android:layout_height="120dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:contentDescription="Chess"-->
-<!--                android:src="@drawable/chess_icon" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-<!--            <Button-->
-<!--                android:id="@+id/btnChess"-->
-<!--                android:layout_width="195dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Chess" />-->
-<!--        </LinearLayout>-->
+            <ImageView
+                android:layout_width="143dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Chess"
+                android:src="@drawable/chess_icon" />
 
-<!--        &lt;!&ndash; Table Tennis &ndash;&gt;-->
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:gravity="center_vertical"-->
-<!--            android:layout_marginTop="8dp">-->
+            <Button
+                android:id="@+id/btnChess"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="Chess" />
+        </LinearLayout>
 
-<!--            <ImageView-->
-<!--                android:layout_width="142dp"-->
-<!--                android:layout_height="104dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:contentDescription="Table Tennis"-->
-<!--                android:src="@drawable/table_tennis_icon" />-->
+        <!-- Table Tennis -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
 
-<!--            <Button-->
-<!--                android:id="@+id/btnTableTennis"-->
-<!--                android:layout_width="195dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Table Tennis" />-->
-<!--        </LinearLayout>-->
+            <ImageView
+                android:layout_width="142dp"
+                android:layout_height="104dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Table Tennis"
+                android:src="@drawable/table_tennis_icon" />
 
-        <!-- Tic Tac Toe -->
+            <Button
+                android:id="@+id/btnTableTennis"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="Table Tennis" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="141dp"
+                android:layout_height="93dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Tic Tac Toe"
+                android:src="@drawable/football_icon" />
+
+            <Button
+                android:id="@+id/buttonTicTacToe"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="Foot Ball" />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

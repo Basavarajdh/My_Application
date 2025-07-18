@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication"> <!-- Add the package name if missing -->
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,48 +16,41 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
 
-        <!-- Sign-In Activity (Launcher) -->
+        <!-- Launcher Activity -->
         <activity
             android:name=".LoginActivity"
-            android:exported="true"> <!-- Explicitly set exported -->
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Login Activity -->
-        <!--<activity
-            android:name=".LoginActivity"
-            android:exported="false" /> &lt;!&ndash; No intent-filter, not exposed &ndash;&gt;
--->
-        <!-- Main Activity -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" /> <!-- No intent-filter, not exposed -->
+        <!-- Core App Screens -->
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".InstructionsActivity" android:exported="false" />
+        <activity android:name=".showinfo" android:exported="false" />
 
-        <!-- Indoor Games Activity -->
-        <activity
-            android:name=".IndoorGamesActivity"
-            android:exported="false" /> <!-- No intent-filter, not exposed -->
+        <!-- Indoor Games -->
+        <activity android:name=".IndoorGamesActivity" android:exported="false" />
+        <activity android:name=".ChessActivity" android:exported="false" />
+        <activity android:name=".TicTacToeActivity" android:exported="false" />
+        <activity android:name=".AliGuliManeActivity" android:exported="false" />
+        <activity android:name=".LudoActivity" android:exported="false" />
 
-        <!-- Outdoor Games Activity -->
-        <activity
-            android:name=".OutdoorGamesActivity"
-            android:exported="false" /> <!-- No intent-filter, not exposed -->
-        <activity android:name=".ChessActivity" />
-        <activity android:name=".CricketActivity" />
-        <activity android:name=".TicTacToeActivity" />
-        <activity android:name=".RockPaperScissorsActivity"/>
-        <activity android:name=".AliGuliManeActivity"/>
-        <activity android:name=".InstructionsActivity" />
-        <activity android:name=".BasketballGameActivity"/>
-        <activity android:name=".FootballGameActivity" />
-        <activity android:name=".PuliMekaActivity" />
-        <activity android:name=".showinfo" />
-        <activity android:name=".LudoActivity" />
+        <!-- Outdoor Games -->
+        <activity android:name=".OutdoorGamesActivity" android:exported="false" />
+        <activity android:name=".CricketActivity" android:exported="false" />
+        <activity android:name=".BasketballGameActivity" android:exported="false" />
+        <activity android:name=".FootballGameActivity" android:exported="false" />
+        <activity android:name=".PuliMekaActivity" android:exported="false" />
+
+        <!-- Mini Games -->
+        <activity android:name=".RockPaperScissorsActivity" android:exported="false" />
+
+        <!-- Auth Screens -->
+        <activity android:name=".SignUpActivity" android:exported="false" />
+        <activity android:name=".ForgotPasswordActivity" android:exported="false" />
     </application>
-
-
 
 </manifest>
